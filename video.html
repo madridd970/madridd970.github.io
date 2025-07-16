@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Tutorial</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            text-align: center;
+            margin: 0; /* Elimina márgenes por defecto */
+            padding: 20px; /* Espaciado interno */
+        }
+        .video-container {
+            width: 100%; /* Ocupa todo el ancho disponible */
+            max-width: 1200px; /* Ancho máximo para pantallas grandes */
+            margin: 20px auto; /* Centra el contenedor */
+        }
+        .video-container iframe {
+            width: 100%; /* El iframe ocupa el 100% del contenedor */
+            height: 700px; /* Altura fija para hacer el video más alto */
+        }
+        .back-button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 20px;
+            background-color: #007BFF; /* Color azul */
+            color: white; /* Color del texto */
+            text-decoration: none; /* Sin subrayado */
+            border-radius: 5px; /* Bordes redondeados */
+            transition: background-color 0.3s;
+        }
+        .back-button:hover {
+            background-color: #0056b3; /* Color más oscuro al pasar el mouse */
+        }
+    </style>
+</head>
+<body>
+    <h1>Video Tutorial</h1>
+    <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/GVmntLlqqA8?si=8aPvTXKyAiL4YCiR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+    <a href="index.php" class="back-button">Regresar a Inicio</a>
+</body>
+</html>

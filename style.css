@@ -1,0 +1,103 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+.contact-info {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.contact-item {
+    margin: 10px;
+    text-align: left;
+    max-width: 200px;
+}
+
+.contact-icon {
+    width: 40px; /* Ajusta el tamaño según sea necesario */
+    height: 40px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.contact-logo {
+    margin-top: 20px;
+}
+
+.logo {
+    width: 100px; /* Ajusta el tamaño según sea necesario */
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.file-manager, .projects {
+    background: white;
+    padding: 20px;
+    margin: 10px 0;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin: 10px 0 5px;
+}
+
+input[type="text"], textarea {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 15px;
+    margin: 5px;
+    background-color: #007BFF; /* Color azul */
+    color: white; /* Color del texto */
+    text-align: center;
+    text-decoration: none; /* Sin subrayado */
+    border-radius: 5px; /* Bordes redondeados */
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #0056b3; /* Color más oscuro al pasar el mouse */
+}
+
+.video-container {
+  width: 100%;
+  max-width: 640px; /* Ajusta el ancho según tu preferencia */
+  margin: 20px auto; /* Centrado horizontalmente */
+}
