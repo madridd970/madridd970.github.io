@@ -1,8 +1,13 @@
 body {
     font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
     margin: 0;
     padding: 20px;
-    background-color: #f4f4f4;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
 }
 
 .contact-info {
@@ -80,6 +85,30 @@ footer {
     margin-top: 20px;
 }
 
+.projects {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+li:last-child {
+    border-bottom: none; /* Quitar el borde del último elemento */
+}
+
 .btn {
     display: inline-block;
     padding: 10px 15px;
@@ -96,8 +125,32 @@ footer {
     background-color: #0056b3; /* Color más oscuro al pasar el mouse */
 }
 
-.video-container {
-  width: 100%;
-  max-width: 640px; /* Ajusta el ancho según tu preferencia */
-  margin: 20px auto; /* Centrado horizontalmente */
+.btn-danger {
+    background-color: #f44336; /* Rojo */
+}
+
+.btn-danger:hover {
+    background-color: #da190b; /* Rojo más oscuro al pasar el mouse */
+}
+
+.alert {
+    background-color: #dff0d8;
+    color: #3c763d;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: flex-end; /* Alinea los botones a la derecha */
+    gap: 10px; /* Espaciado entre botones */
+}
+
+li {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
