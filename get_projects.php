@@ -19,9 +19,17 @@ $result = $conn->query($sql);
 if ($result->num_rows > 0) {
     // Salida de cada fila
     while ($row = $result->fetch_assoc()) {
-        echo "<li>" . $row["nombre"] . " - " . $row["descripcion"] . " (" . ($row["terminado"] ? "Terminado" : "Pendiente") . ")";
-        echo " <a href='edit_project.php?id=" . $row["id"] . "' class='btn'>Modificar</a>";
-        echo " <a href='delete_project.php?id=" . $row["id"] . "' class='btn' onclick=\"return confirm('¿Estás seguro de que quieres eliminar este proyecto?');\">Eliminar</a>";
+        echo "<li>" . htmlspecialchars($row["nombre"]) . " - " . htmlspecialchars($row["descripcion"]) . " (" . ($row["terminado"] ? "Terminado" : "Pendiente") . ")";
+        echo "<div class='button-container'>
+                <form action='edit_project.php' method='GET' style='display:inline;'>
+                    <input type='hidden' name='id' value='" . htmlspecialchars($row["id"]) . "'>
+                    <button type='submit' class='btn'>Modificar</button>
+                </form>
+                <form action='delete_project.php' method='POST' style='display:inline;'>
+                    <input type='hidden' name='id' value='" . htmlspecialchars($row["id"]) . "'>
+                    <button type='submit' class='btn btn-danger' onclick=\"return confirm('¿Estás seguro de que quieres eliminar este proyecto?');\">Eliminar</button>
+                </form>
+              </div>";
         echo "</li>";
     }
 } else {
