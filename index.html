@@ -10,12 +10,14 @@
     <header>
         <h1>The SyEnergy</h1>
         <nav>
-            <a href="video.html" class="nav-link video-btn">Ver Video</a>
+            <form action="video.html" method="GET" style="display:inline;">
+                <button type="submit" class="nav-link video-btn">Ver Video</button>
+            </form>
         </nav>
     </header>
     
     <div class="file-manager">
-        <h2>GESTOR DE PROYECTOS</h2>
+        <h2>GESTOR DE ARCHIVOS</h2>
         <form action="add_project.php" method="POST">
             <label for="project_name">Nombre del Proyecto:</label>
             <input type="text" id="project_name" name="project_name" required>
@@ -33,18 +35,27 @@
         </form>
     </div>
 
-    <div class="projects">
-        <h2>PROYECTOS</h2>
-        <ul id="project_list">
-            <?php include 'get_projects.php'; ?>
-        </ul>
+    <div class="search-container">
+        <h2>Buscar Proyecto</h2>
+        <form action="search_project.php" method="GET">
+            <input type="text" name="query" placeholder="Buscar proyecto..." required>
+            <button type="submit">Buscar</button>
+        </form>
     </div>
+
+    <div class="projects">
+    <h2>PROYECTOS</h2>
+    <ul id="project_list">
+        <?php include 'get_projects.php'; ?>
+    </ul>
+</div>
 
     <!-- Botón para reproducir audio -->
     <div class="audio-container">
         <h2>Reproducir Audio</h2>
         <audio controls>
             <source src="https://pfst.cf2.poecdn.net/base/audio/fbc46fafb30d274edf1e332de064dec7460230e6998a8f4b0b37926d7a657356" type="audio/mpeg">
+            Tu navegador no soporta la reproducción de audio.
         </audio>
     </div>
 
